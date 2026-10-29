@@ -11,25 +11,172 @@
 
 <body>
 
-  <!-- ===== CABEÇALHO ===== -->
-  <header>
+  <!-- ===== CABEÇALHO (João Milton / Renato) ===== -->
+  <header class="cabecalho">
     <h1>Vitrine Virtual</h1>
 
-    <!-- RENATO: criar aqui o menu <nav> (Home, Categorias, Mapa, Sobre). -->
+    <nav class="menu-principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#categorias">Categorias</a></li>
+        <li><a href="#mapa">Mapa</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
+
+    <!-- Atalhos do canto direito. Os ícones entram pelo CSS. -->
+    <div class="atalhos-cabecalho">
+      <a href="#inicio" class="atalho-busca" aria-label="Buscar"></a>
+      <a href="#painel" class="atalho-usuario" aria-label="Minha conta"></a>
+    </div>
   </header>
 
 
   <!-- ===== ÁREA PRINCIPAL ===== -->
   <main>
 
-    <!-- RENATO: seção de destaque (barra de busca e "Empreendedores em Destaque").
-         Ao terminar, passe o arquivo para o Fabrício. -->
+    <!-- ===== TELA INICIAL (RENATO - pronto) ===== -->
 
-    <!-- FABRÍCIO: seção de categorias e resultados (filtros e cartões dos negócios).
-         Ao terminar, passe o arquivo para a Vanessa. -->
+    <section id="inicio" class="chamada-principal">
+      <h2>Compre local, fortaleça nossa cidade!</h2>
+      <p>Aqui você encontra microempresas e autônomos da sua região. Valorize o que é da nossa cidade!</p>
 
-    <!-- VANESSA: seção do perfil do empreendedor e do painel de gerenciamento.
-         Ao terminar, devolva o arquivo ao Renato para a revisão final. -->
+      <form class="busca" action="#resultados">
+        <label for="busca">Buscar por nome, categoria ou bairro</label>
+        <input type="search" id="busca" name="busca" placeholder="Buscar por nome, categoria ou bairro...">
+        <button type="submit">Buscar</button>
+      </form>
+
+      <p class="frase-banner">Pequenos negócios, grandes sonhos!</p>
+      <!-- Troque pelo arquivo real da imagem. -->
+      <img class="imagem-banner" src="img/banner.jpg" alt="Empreendedora sorrindo em seu negócio">
+    </section>
+
+    <!-- O cartão abaixo é o modelo (class "cartao-negocio")
+         para Fabrício e Vanessa reaproveitarem. -->
+    <section id="destaques" class="destaques">
+      <h3>Empreendedores em Destaque</h3>
+      <a href="#resultados" class="ver-todos">Ver todos</a>
+
+      <article class="cartao-negocio">
+        <img src="img/cabeleireiro.jpg" alt="Cabeleireira secando o cabelo de uma cliente">
+        <p class="etiqueta-categoria">Cabeleireiro</p>
+        <h4>Studio Beleza &amp; Estilo</h4>
+        <p class="avaliacao">4.8 (32 avaliações)</p>
+        <p class="bairro">Centro</p>
+        <a href="#perfil">Ver perfil</a>
+      </article>
+
+      <article class="cartao-negocio">
+        <img src="img/manicure.jpg" alt="Manicure fazendo as unhas de uma cliente">
+        <p class="etiqueta-categoria">Manicure</p>
+        <h4>Unhas e Cia</h4>
+        <p class="avaliacao">4.9 (56 avaliações)</p>
+        <p class="bairro">Jardim das Flores</p>
+        <a href="#perfil">Ver perfil</a>
+      </article>
+
+      <article class="cartao-negocio">
+        <img src="img/lanchonete.jpg" alt="Hambúrguer servido em uma tábua">
+        <p class="etiqueta-categoria">Lanchonete</p>
+        <h4>Sabor do Bairro</h4>
+        <p class="avaliacao">4.7 (41 avaliações)</p>
+        <p class="bairro">Vila Nova</p>
+        <a href="#perfil">Ver perfil</a>
+      </article>
+
+      <article class="cartao-negocio">
+        <img src="img/estetica.jpg" alt="Cliente recebendo tratamento de estética facial">
+        <p class="etiqueta-categoria">Estética</p>
+        <h4>Spa Bem Estar</h4>
+        <p class="avaliacao">4.9 (28 avaliações)</p>
+        <p class="bairro">Centro</p>
+        <a href="#perfil">Ver perfil</a>
+      </article>
+    </section>
+
+    <section id="categorias" class="categorias">
+      <h3>Categorias</h3>
+      <a href="#resultados" class="ver-todas">Ver todas as categorias</a>
+
+      <ul class="lista-categorias">
+        <li><a href="#resultados"><span class="icone-categoria"></span>Cabeleireiro</a></li>
+        <li><a href="#resultados"><span class="icone-categoria"></span>Estética</a></li>
+        <li><a href="#resultados"><span class="icone-categoria"></span>Manicure</a></li>
+        <li><a href="#resultados"><span class="icone-categoria"></span>Alimentação</a></li>
+        <li><a href="#resultados"><span class="icone-categoria"></span>Vestuário</a></li>
+        <li><a href="#resultados"><span class="icone-categoria"></span>Casa e Decoração</a></li>
+        <li><a href="#resultados"><span class="icone-categoria"></span>Serviços Gerais</a></li>
+        <li><a href="#resultados"><span class="icone-categoria"></span>Outros</a></li>
+      </ul>
+    </section>
+
+
+    <!-- ===== CATEGORIAS E RESULTADOS (FABRÍCIO) ===== -->
+    <section id="resultados">
+      <!-- FABRÍCIO: filtros (bairro, tipo de negócio, avaliação) e cartões
+           dos negócios. Reaproveite o cartão "cartao-negocio" da tela inicial.
+           Ao terminar, passe o arquivo para a Vanessa. -->
+    </section>
+
+
+    <!-- ===== MAPA E SOBRE (RENATO - pronto) ===== -->
+    <section id="mapa" class="mapa">
+      <h2>Mapa</h2>
+      <p>Encontre os negócios perto de você.</p>
+      <!-- Espaço reservado para o mapa. Ele será colocado aqui depois. -->
+      <div class="espaco-mapa"></div>
+    </section>
+
+    <section id="sobre" class="sobre">
+      <h2>Sobre a Vitrine Virtual</h2>
+      <p>A Vitrine Virtual é um projeto de divulgação de microempresas e autônomos da nossa cidade.</p>
+      <p>Nosso objetivo é tornar esses empreendedores visíveis para a comunidade e ajudar as pessoas a encontrar serviços e estabelecimentos locais.</p>
+    </section>
+
+
+    <!-- ===== PERFIL E PAINEL (VANESSA) ===== -->
+    <section id="perfil">
+      <!-- VANESSA: página do empreendedor (fotos, informações, horários,
+           localização, portfólio e depoimentos). Siga o padrão de nomes
+           usado na tela inicial. -->
+    </section>
+
+    <!-- O esqueleto do painel (menu lateral e áreas) já está pronto (RENATO).
+         VANESSA: preencha cada área com o conteúdo indicado. -->
+    <section id="painel" class="painel">
+      <h2>Painel do empreendedor</h2>
+
+      <aside class="menu-lateral">
+        <nav>
+          <ul>
+            <li><a href="#painel-dados">Dados do negócio</a></li>
+            <li><a href="#painel-fotos">Fotos do portfólio</a></li>
+            <li><a href="#painel-notificacoes">Notificações</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <div class="conteudo-painel">
+
+        <section id="painel-dados">
+          <h3>Dados do negócio</h3>
+          <!-- VANESSA: formulário com nome, telefone, e-mail, descrição,
+               endereço e horários. -->
+        </section>
+
+        <section id="painel-fotos">
+          <h3>Fotos do portfólio</h3>
+          <!-- VANESSA: área de upload (arrastar e soltar). -->
+        </section>
+
+        <section id="painel-notificacoes">
+          <h3>Notificações</h3>
+          <!-- VANESSA: lista de avisos para o empreendedor. -->
+        </section>
+
+      </div>
+    </section>
 
   </main>
 
