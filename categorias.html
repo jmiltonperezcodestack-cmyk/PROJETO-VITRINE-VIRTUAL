@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Negócios Locais - Comunidade</title>
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <div>
+            <a href="index.html">Logo do Projeto</a>
+        </div>
+        <form action="/busca" method="GET">
+            <input type="search" name="q" placeholder="Pesquisar por nome, serviço ou produto...">
+            <button type="submit">Buscar</button>
+        </form>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastrar.html">Categorias</a></li>
+                <li><a href="index.html">Mapa</a></li>
+                <li><a href="cadastrar.html">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção de Cabeçalho da Listagem -->
+        <section>
+            <h1>Resultados para "Comércios Locais"</h1>
+            <p>Mostrando 124 negócios encontrados na sua região</p>
+            
+            <!-- Ordenação -->
+            <div>
+                <label for="ordenacao">Ordenar por:</label>
+                <select id="ordenacao">
+                    <option value="relevancia">Relevãncia</option>
+                    <option value="avaliacao">Melhor Avaliação</option>
+                    <option value="recente">Recentes</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Layout de Grade: Filtros + Resultados -->
+        <div>
+            <!-- Barra Lateral de Filtros -->
+            <aside>
+                <h2>Filtrar Resultados</h2>
+                
+                <form>
+                    <!-- Filtro por Bairro -->
+                    <fieldset>
+                        <legend>Bairro</legend>
+                        <div>
+                            <input type="checkbox" id="bairro-centro" name="bairro" value="centro">
+                            <label for="bairro-centro">Centro</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="bairro-jardim" name="bairro" value="jardim-america">
+                            <label for="bairro-jardim">Jardim América</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="bairro-vila" name="bairro" value="vila-nova">
+                            <label for="bairro-vila">Vila Nova</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Filtro por Tipo de Negócio -->
+                    <fieldset>
+                        <legend>Tipo de Negócio</legend>
+                        <div>
+                            <input type="checkbox" id="tipo-alimentacao" name="tipo" value="alimentacao">
+                            <label for="tipo-alimentacao">Alimentação & Confeitaria</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tipo-beleza" name="tipo" value="beleza">
+                            <label for="tipo-beleza">Beleza & Estética</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tipo-servicos" name="tipo" value="servicos">
+                            <label for="tipo-servicos">Serviços Gerais</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="tipo-moda" name="tipo" value="moda">
+                            <label for="tipo-moda">Moda & Vestuário</label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Filtro por Avaliação -->
+                    <fieldset>
+                        <legend>Avaliação</legend>
+                        <div>
+                            <input type="radio" id="aval-5" name="avaliacao" value="5">
+                            <label for="aval-5">★★★★★ (5 estrelas)</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="aval-4" name="avaliacao" value="4">
+                            <label for="aval-4">★★★★☆ ou mais</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="aval-3" name="avaliacao" value="3">
+                            <label for="aval-3">★★★☆☆ ou mais</label>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Aplicar Filtros</button>
+                    <button type="reset">Limpar Filtros</button>
+                </form>
+            </aside>
+
+            <!-- Listagem de Cards de Negócios -->
+            <section>
+                <div>
+                    <!-- Card de Negócio 1 -->
+                    <article>
+                        <img src="placeholder-negocio.jpg" alt="Foto da fachada ou produto do negócio">
+                        <div>
+                            <span>Alimentação</span>
+                            <h3>Bolo Caseiro da Dona Maria</h3>
+                            <p>Bolos artesanais, tortas e salgados para festas e café da tarde.</p>
+                            <p>📍 Centro</p>
+                            <p>⭐ 4.9 (42 avaliações)</p>
+                            <a href="detalhes-negocio.html">Ver Perfil & Contato</a>
+                        </div>
+                    </article>
+
+                    <!-- Card de Negócio 2 -->
+                    <article>
+                        <img src="placeholder-negocio.jpg" alt="Foto do espaço ou serviço">
+                        <div>
+                            <span>Beleza & Estética</span>
+                            <h3>Carlos Barbearia Tradicional</h3>
+                            <p>Corte moderno, barba na navalha e atendimento personalizado.</p>
+                            <p>📍 Jardim América</p>
+                            <p>⭐ 5.0 (28 avaliações)</p>
+                            <a href="detalhes-negocio.html">Ver Perfil & Contato</a>
+                        </div>
+                    </article>
+
+                    <!-- Card de Negócio 3 -->
+                    <article>
+                        <img src="placeholder-negocio.jpg" alt="Foto de produtos de artesanato">
+                        <div>
+                            <span>Artesanato</span>
+                            <h3>Ateliê Mãos Criativas</h3>
+                            <p>Decoração em MDF, costura criativa e lembrancinhas personalizadas.</p>
+                            <p>📍 Vila Nova</p>
+                            <p>⭐ 4.8 (15 avaliações)</p>
+                            <a href="detalhes-negocio.html">Ver Perfil & Contato</a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Paginação -->
+                <nav aria-label="Navegação de páginas">
+                    <ul>
+                        <li><a href="#" aria-disabled="true">Anterior</a></li>
+                        <li><a href="#" aria-current="page">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">Próxima</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Projeto de Apoio a Microempresas e Autônomos Locais.</p>
+    </footer>
+
+</body>
+</html>
